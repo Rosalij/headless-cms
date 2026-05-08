@@ -1,6 +1,7 @@
 export type Image = {
   node?: {
     mediaItemUrl?: string;
+    
     altText?: string;
   };
 };
