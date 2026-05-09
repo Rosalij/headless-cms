@@ -12,7 +12,7 @@ export default async function Filler() {
   if (!image?.mediaItemUrl) return null;
 
   return (
-    <section className="relative w-full  h-110 py-80 overflow-hidden flex items-center justify-center ">
+    <section className="relative w-full h-screen bottom-0 flex items-center justify-center " style={{borderTop: "2px solid var(--color-secondary)",}}>
           {/* Background image */}
           {image?.mediaItemUrl && (
             
@@ -20,7 +20,7 @@ export default async function Filler() {
               src={image.mediaItemUrl}
               alt={image.altText ?? ""}
               fill
-              className="object-cover object-middle"
+              className="object-cover object-bottom"
             />
           )}
           {/* Overlay */}

@@ -10,7 +10,8 @@ export default async function CTA() {
   const image = cta.ctaBackgroundImage?.node;
 
   return (
-    <section id="contact" className="relative w-full py-50 overflow-hidden flex items-center justify-center">
+    <section id="contact" className="relative w-full py-50 overflow-hidden flex items-center justify-center"
+    style={{ borderTop: "2px solid var(--color-secondary)", borderBottom: "2px solid var(--color-secondary)" }}>
       {/* Background image */}
       {image?.mediaItemUrl && (
         <Image

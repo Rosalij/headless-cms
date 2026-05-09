@@ -10,7 +10,7 @@ export default async function Hero() {
   const image = settings.heroImage?.node;
 
   return (
-    <section className="relative w-full h-screen bottom-20 flex items-center justify-center">
+    <section className="relative w-full h-screen bottom-0.5 flex items-center justify-center">
       {/* Background image */}
       {image?.mediaItemUrl && (
         <Image

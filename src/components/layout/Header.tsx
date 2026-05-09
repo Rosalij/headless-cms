@@ -15,9 +15,9 @@ export default async function Header() {
 
   return (
     <header
-      className="sticky top-0 left-0 right-0 z-50 w-full py-1"
-      style={{ background: "var(--color-background)" }}
-    >
+      className="fixed top-0 left-0 right-0 z-50 w-full py-1"
+  style={{ background: "var(--color-background)", borderBottom: "2px solid var(--color-secondary)" }}
+>
       <div
         className="mx-auto flex-col p-2 flex items-center justify-between md:flex-row"
         style={{ maxWidth: "var(--layout-wide)" }}

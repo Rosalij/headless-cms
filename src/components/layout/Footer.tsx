@@ -8,8 +8,8 @@ export default async function Footer() {
 
   return (
     <footer
-      className="w-full border-1 p-7 left-0 right-0"
-      style={{ borderTop: "5em solid var(--color-secondary)", background: "var(--color-background) ", opacity: 0.6, color: "var(--color-black)" }}
+      className="relative p-10 overflow-hiddenw-full border-1 p-7 left-0 right-0 "
+        style={{borderTop: "10px solid var(--color-secondary)", background: "rgb(247, 204, 152)", color: "var(--color-black)"}}
     >
       <div
         className="mx-auto  px-6 flex flex-col items-center justify-between gap-6"
