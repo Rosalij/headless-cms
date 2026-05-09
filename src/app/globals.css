@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Oswald:wght@200..700&display=swap');
 @import "tailwindcss";
 
-
+/* Global CSS variables for theming and design consistency across the application. */
 @theme {
   /* Colors */
   --color-primary:    #313638;
