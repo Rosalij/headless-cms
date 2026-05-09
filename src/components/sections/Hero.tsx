@@ -13,19 +13,19 @@ export default async function Hero() {
     <section className="relative w-full h-screen bottom-16 bottom-0.5 flex items-center justify-center">
       {/* Background image */}
       {image?.mediaItemUrl && (
-        <Image
-          src={image.mediaItemUrl}
-          alt={image.altText ?? "Hero"}
-          fill
-          className="object-cover object-right md:object-center opacity-100"
-          priority
-        />
+       <Image
+  src={image.mediaItemUrl}
+  alt={image.altText ?? "Hero"}
+  fill
+  className="object-cover object-[70%] md:object-center opacity-100"
+  priority
+/>
       )}
       {/* Overlay */}
       <div className="absolute inset-0" style={{ background: "var(--color-secondary)", opacity: 0.1 }} />
       {/* Content */}
       <div
-        className="relative m-auto z-10 h-full flex flex-col items-center gap-45 justify-center"
+        className="relative m-auto z-10 h-full flex flex-col items-center gap-30 justify-center"
         style={{ maxWidth: "var(--layout-wide)" }}
       >
         {settings.logotype?.node?.mediaItemUrl ? (
