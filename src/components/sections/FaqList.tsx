@@ -12,7 +12,7 @@ export default function FaqList({ faqs }: { faqs: Faq[] }) {
         <li key={index} style={{ borderColor: "var(--color-primary)" }}>
           <button
             onClick={() => setOpen(open === index ? null : index)}
-            className="w-full flex items-center justify-between gap-2 py-2 text-left"
+            className="w-full flex items-center justify-between gap-2 py-5 text-left"
           >
             <span
               className="font-heading"

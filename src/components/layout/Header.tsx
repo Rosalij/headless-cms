@@ -53,10 +53,16 @@ export default async function Header() {
               {page.title}
             </Link>
           ))}
+          <Link href="#team" className="font-body font-small p-1 font-bold uppercase duration-200 hover:underline hover:underline-offset-4 hover:decoration-3" style={{ letterSpacing: "0.06em", fontSize: "var(--text-sm)", color: "var(--color-secondary)" }}>
+            Team
+          </Link>
+          <Link href="#tours" className="font-body font-small p-1 font-bold uppercase duration-200 hover:underline hover:underline-offset-4 hover:decoration-3" style={{ letterSpacing: "0.06em", fontSize: "var(--text-sm)", color: "var(--color-secondary)" }}>
+            Tours
+          </Link>
           <a
 
-            href="#contact"
-            className="px-5 py-2 font-body transition-opacity duration-200 hover:opacity-80"
+            href="/contact"
+            className="px-2  py-2 font-body transition-opacity duration-200 hover:opacity-80"
             style={{
               background: "var(--color-primary)",
               color: "var(--color-background)",

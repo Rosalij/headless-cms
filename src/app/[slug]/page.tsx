@@ -18,23 +18,38 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <main
-      className="mx-auto m-16 text-center w-screen gap-12"
-        style={{ width: "100%" }}
+      className="w-full min-h-screen pt-24"
+      style={{ background: "var(--color-background)" }}
     >
-        <div style={{ background: "var(--color-background)" }} className="mx-auto px-6 py-20">
-      <h1
-        className="font-heading mb-8 w-full"
-        style={{ fontSize: "var(--text-4xl)", color: "var(--color-primary)" }}
-      >
-        {page.title}
-      </h1>
       <div
-        className="font-body leading-relaxed"
-        style={{ fontSize: "var(--text-base)", color: "var(--color-black)" }}
-        dangerouslySetInnerHTML={{ __html: page.content }}
-      />
-       {/* Show FAQ component on faq page */}
-      {slug === "faq" && <FAQ />}
-  </div>  </main>
+        className="mx-auto px-6 py-12"
+        style={{ maxWidth: "var(--layout-content)" }}
+      >
+        <h1
+          className="font-heading mb-6"
+          style={{
+            fontSize: "clamp(2rem, 6vw, var(--text-4xl))",
+            color: "var(--color-primary)",
+            lineHeight: 1.2,
+          }}
+        >
+          {page.title}
+        </h1>
+
+        {page.content && (
+          <div
+            className="font-body leading-relaxed"
+            style={{
+              fontSize: "clamp(1rem, 3vw, var(--text-lg))",
+              color: "var(--color-primary)",
+              letterSpacing: "0.5px",
+            }}
+            dangerouslySetInnerHTML={{ __html: page.content }}
+          />
+        )}
+
+        {slug === "faq" && <FAQ />}
+      </div>
+    </main>
   );
 }
