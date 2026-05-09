@@ -2,11 +2,40 @@
 // Types such as navigation pages, global settings, team members, CTAs, tours, FAQs, and testimonials. 
 // These types are used to ensure type safety when fetching and using data from the WordPress backend via GraphQL queries.
 
+
+export type Post = {
+  id?: string;
+  title?: string;
+  slug?: string;
+  date?: string;
+  excerpt?: string;
+  featuredImage?: Image;
+  featuredPosts?: {
+    featured?: boolean;
+  };
+};
+
+export type SinglePost = {
+  title?: string;
+  date?: string;
+  content?: string;
+  featuredImage?: Image;
+};
+
+export type SinglePostResponse = {
+  post: SinglePost;
+};
+
+export type PostsResponse = {
+  posts: {
+    nodes: Post[];
+  };
+};
+
 export type NavPage = {
   title?: string;
   slug?: string;
 };
-
 export type NavPagesResponse = {
   pages: {
     nodes: NavPage[];

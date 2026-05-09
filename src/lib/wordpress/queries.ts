@@ -2,6 +2,28 @@
 // Each query corresponds to a specific type of data, such as posts, pages, global settings, team members, CTAs, tours, FAQs, and testimonials.
 // These queries are used by the fetchGraphQL function in the client module to retrieve data for the application.
 
+export const GET_FEATURED_POSTS = `
+  query GetFeaturedPosts {
+    posts {
+      nodes {
+        featuredImage {
+          node {
+            altText
+            mediaItemUrl
+          }
+        }
+        slug
+        title
+        featuredPosts {
+          featured
+        }
+        excerpt
+        content
+      }
+    }
+  }
+`;
+
 export const GET_POSTS = `
   query GetPosts {
     posts {
@@ -10,6 +32,12 @@ export const GET_POSTS = `
         title
         slug
         content
+        featuredImage {
+          node {
+          altText
+            mediaItemUrl
+          }
+        }
         excerpt
       }
     }
@@ -19,9 +47,15 @@ export const GET_POSTS = `
 export const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: ID!) {
     post(id: $slug, idType: SLUG) {
-    slug
       title
+      date
       content
+      featuredImage {
+        node {
+          altText
+          mediaItemUrl
+        }
+      }
     }
   }
 `;

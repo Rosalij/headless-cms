@@ -9,6 +9,7 @@ import Tours from "@/components/sections/Tours";
 
 import Filler from "@/components/sections/Filler";
 import Testimonials from "@/components/sections/Testimonials";
+import FeaturedPosts from "@/components/sections/FeaturedPosts";
 
 export default async function Page() {
 
@@ -16,6 +17,7 @@ export default async function Page() {
   return ( 
 <>
 < Hero />
+< FeaturedPosts />
 < Tours />
 < CTA />
 < Team />
