@@ -1,11 +1,10 @@
-
-
 const API_URL = process.env.WORDPRESS_URL as string;
-export async function fetchGraphQL<T>(query: string): Promise<T> {
-  const res = await fetch(process.env.WORDPRESS_URL!, {
+
+export async function fetchGraphQL<T>(query: string, variables?: Record<string, unknown>): Promise<T> {
+  const res = await fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query }),
+    body: JSON.stringify({ query, variables }),
   });
 
   const json = await res.json();

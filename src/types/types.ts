@@ -1,3 +1,14 @@
+export type NavPage = {
+  title?: string;
+  slug?: string;
+};
+
+export type NavPagesResponse = {
+  pages: {
+    nodes: NavPage[];
+  };
+};
+
 export type Image = {
   node?: {
     mediaItemUrl?: string;
@@ -56,5 +67,16 @@ export type Tour = {
 export type ToursResponse = {
   tours: {
     nodes: { tourfields: Tour }[];
+  };
+};
+
+export type Faq = {
+  question?: string;
+  answer?: string;
+};
+
+export type FaqResponse = {
+  faqs: {
+    nodes: { faqfields: Faq }[];
   };
 };

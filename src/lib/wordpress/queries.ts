@@ -15,10 +15,34 @@ export const GET_POSTS = `
 export const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: ID!) {
     post(id: $slug, idType: SLUG) {
+    slug
       title
       content
     }
   }
+`;
+
+export const GET_PAGE = `
+  query getPage($slug: String!) {
+    pageBy(uri: $slug) {
+    slug
+      title
+      content
+    }
+  }
+`;
+
+
+export const GET_PAGES = `
+  query GetPages {
+    pages {
+      nodes {
+        slug
+        title
+        content
+    }
+  }
+} 
 `;
 
 export const GET_GLOBAL_SETTINGS = `
@@ -97,6 +121,19 @@ export const GET_TOURS = `
           price
           tourDescription
           tourName
+        }
+      }
+    }
+  }
+`;
+
+export const GET_FAQS = `
+  query getFaqs {
+    faqs {
+      nodes {
+        faqfields {
+          question
+          answer
         }
       }
     }
