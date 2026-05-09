@@ -2,6 +2,7 @@
 
 This is a headless WordPress website for Skintrack Åre, a guided ski touring company based in Åre. Built with Next.js, TypeScript, Tailwind CSS v4, and WordPress as a headless CMS via Wordpress API and WPGraphQL plugin.
 
+A live version of the website can be found and is deployed at Netlify at: https://skintrackare.netlify.app/
 ## Tech Stack
 
 - **Frontend:** Next.js 16, React, TypeScript
