@@ -59,12 +59,12 @@ export default async function News() {
 
                   {/* Title */}
                   {post.title && (
-                    <h3
+                    <h2
                       className="font-heading mb-2 group-hover:opacity-70 transition-opacity duration-200"
                       style={{ fontSize: "var(--text-xl)", color: "var(--color-primary)" }}
                     >
                       {post.title}
-                    </h3>
+                    </h2>
                   )}
 
                   {/* Excerpt */}
