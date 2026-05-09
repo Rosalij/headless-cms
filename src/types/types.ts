@@ -81,3 +81,14 @@ export type FaqResponse = {
     nodes: { faqfields: Faq }[];
   };
 };
+
+export type Testimonial = {
+  quote?: string;
+  quoteAuthor?: string;
+};
+
+export type TestimonialsResponse = {
+  testimonials: {
+    nodes: { testimonialFields: Testimonial }[];
+  };
+};

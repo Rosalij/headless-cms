@@ -145,3 +145,16 @@ export const GET_FAQS = `
     }
   }
 `;
+
+export const GET_TESTIMONIALS = `
+  query GetTestimonials {
+    testimonials {
+      nodes {
+        testimonialFields {
+          quote
+          quoteAuthor
+        }
+      }
+    }
+  }
+`;
