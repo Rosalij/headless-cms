@@ -44,7 +44,7 @@ export default async function Hero() {
           <h1
             className="font-body uppercase font-bold text-center px-4"
             style={{
-              fontSize: "clamp(1.5rem, 10vw, var(--text-3xl))",
+              fontSize: "clamp(1.5rem, 10vw, var(--text-2xl))",
               color: "var(--color-background)",
               letterSpacing: "0.04em",
             
