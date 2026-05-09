@@ -53,7 +53,7 @@
 
 
 body {
-  background: var(--color-secondary);
+  background: var(--color-background);
   font-family: var(--font-body);
 }
 
