@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   if (page) {
     return (
-      <main className="w-full min-h-screen" style={{ background: "var(--color-background)" }}>
+      <div className="w-full min-h-screen" style={{ background: "var(--color-background)" }}>
         <div className="mx-auto px-6 py-12" style={{ maxWidth: "var(--layout-content)" }}>
           <h1
             className="font-heading mb-6"
@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
         {slug === "faq" && <FAQ />}
         {slug === "news" && <News />}
-      </main>
+      </div>
     );
   }
 
@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const image = post.featuredImage?.node;
 
   return (
-    <main className="w-full min-h-screen" style={{ background: "var(--color-background)" }}>
+    <div className="w-full min-h-screen" style={{ background: "var(--color-background)" }}>
       {image?.mediaItemUrl && (
         <div className="relative w-full overflow-hidden" style={{ height: "50vh" }}>
           <Image
@@ -104,6 +104,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           ← Back to news
         </a>
       </div>
-    </main>
+    </div>
   );
 }
