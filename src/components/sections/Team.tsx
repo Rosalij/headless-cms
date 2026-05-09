@@ -30,7 +30,7 @@ export default async function Team() {
         </div>
 
         {/* Grid */}
-        <ul className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-x-6 gap-y-12" role="list">
+        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12" role="list">
           {members.map((item, index) => {
             const image = item.portraitImage?.node;
             return (

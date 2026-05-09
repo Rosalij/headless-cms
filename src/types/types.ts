@@ -33,3 +33,28 @@ export type TeamResponse = {
     nodes: { teamFields: TeamMember }[];
   };
 };
+
+export type Cta = {
+  buttonLink?: string;
+  buttonText?: string;
+  ctaText?: string;
+  ctaBackgroundImage?: Image;
+};
+
+export type CtaResponse = {
+  ctas: {
+    nodes: { acfFields: Cta }[];
+  };
+};
+
+export type Tour = {
+  price?: string;
+  tourDescription?: string;
+  tourName?: string;
+};
+
+export type ToursResponse = {
+  tours: {
+    nodes: { tourfields: Tour }[];
+  };
+};

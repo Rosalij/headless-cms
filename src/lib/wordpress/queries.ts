@@ -67,3 +67,38 @@ export const GET_TEAM = `
     }
   }
 `;
+
+export const GET_CTA = `
+  query getCTA {
+
+  ctas {
+    nodes {
+      acfFields {
+        buttonLink
+        buttonText
+        ctaText
+        ctaBackgroundImage {
+          node {
+            altText
+            mediaItemUrl
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
+export const GET_TOURS = `
+  query getTours {
+    tours {
+      nodes {
+        tourfields {
+          price
+          tourDescription
+          tourName
+        }
+      }
+    }
+  }
+`;

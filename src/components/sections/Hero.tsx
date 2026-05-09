@@ -10,41 +10,42 @@ export default async function Hero() {
   const image = settings.heroImage?.node;
 
   return (
-    <section className="relative w-full h-220 flex items-center justify-center">
+    <section className="relative w-full h-screen bottom-20 flex items-center justify-center">
       {/* Background image */}
       {image?.mediaItemUrl && (
         <Image
           src={image.mediaItemUrl}
           alt={image.altText ?? "Hero"}
           fill
-          className="object-cover object-right md:object-center opacity-90"
+          className="object-cover object-right md:object-center opacity-100"
           priority
         />
       )}
-
+      {/* Overlay */}
+      <div className="absolute inset-0" style={{ background: "var(--color-secondary)", opacity: 0.1 }} />
       {/* Content */}
       <div
-        className="relative m-auto z-10 h-full flex flex-col items-center gap-15 bottom-20 justify-center"
+        className="relative m-auto z-10 h-full flex flex-col items-center gap-20 justify-center"
         style={{ maxWidth: "var(--layout-wide)" }}
       >
         {settings.logotype?.node?.mediaItemUrl ? (
           <Image
-            style={{ width: "18em" }}
+            style={{ width: "20em" }}
             src={settings.logotype.node.mediaItemUrl}
             alt={settings.logotype.node.altText ?? "Logotype"}
-            width={80}
-            height={80}
+            width={100}
+            height={100}
             className="logo-hero object-contain"
           />
         ) : null}
         {settings.heroHeadingText && (
           <h1
-            className="font-heading text-center px-4"
+            className="font-body uppercase font-bold text-center px-4"
             style={{
-              fontSize: "clamp(1.5rem, 5vw, var(--text-4xl))",
+              fontSize: "clamp(1.5rem, 10vw, var(--text-3xl))",
               color: "var(--color-background)",
               letterSpacing: "0.04em",
-              textDecoration: "underline",
+            
               textDecorationColor: "var(--color-background)",
               textUnderlineOffset: "0.5em",
               textDecorationThickness: "1px",

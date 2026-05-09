@@ -14,7 +14,7 @@ export default async function Header() {
       style={{  background: "var(--color-background)" }}
     >
       <div
-        className="mx-auto px-4 h-16 flex items-center justify-between"
+        className="mx-auto flex-col p-2 flex items-center justify-between md:flex-row "
         style={{ maxWidth: "var(--layout-wide)" }}
       >
         {/* Logo / Title */}
@@ -23,9 +23,9 @@ export default async function Header() {
             <Image
               src={settings.logotype.node.mediaItemUrl}
               alt={settings.logotype.node.altText ?? settings.headerTitle ?? "Logo"}
-              width={70}
-              height={70}
-              className="object-contain"
+              width={110}
+              height={110}
+              className="object-cover"
           
             />
           ) : (
@@ -49,21 +49,22 @@ export default async function Header() {
             <a
               key={item.href}
               href={item.href} 
-              className="font-body uppercase bold font-medium transition-opacity duration-200 hover:underline"
-              style={{ letterSpacing: "0.2em",fontSize: "var(--text-sm)", color: "var(--color-primary)"  }}
+              className="font-body font-small p-1 font-bold uppercase duration-200 hover:underline hover:underline-offset-4 hover:decoration-3"
+              style={{ letterSpacing: "0.06em", fontSize: "var(--text-sm)", color: "var(--color-secondary)"  }}
             >
               {item.label}
             </a>
           ))}
 <a
 href="#contact"
-className="px-5 py-2 font-body book-now transition-opacity duration-200 hover:opacity-80"
+className="px-5 py-2 font-body transition-opacity duration-200 hover:opacity-80"
 style={{
   background: "var(--color-primary)",
   color: "var(--color-background)",
   border: "1px solid var(--color-black)",
   fontSize: "var(--text-xs)",
   letterSpacing: "0.2em",
+  borderRadius: "var(--radius-sm)",
 }}>
   BOOK NOW 
 </a> 

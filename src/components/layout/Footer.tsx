@@ -8,7 +8,7 @@ export default async function Footer() {
 
   return (
     <footer
-      className="w-full border-1 py-10 bottom-0 left-0 right-0 mt-auto"
+      className=" w-full border-1 py-10 bottom-0 left-0 right-0 mt-auto"
       style={{ background: "var(--color-background) ", opacity: 0.6, color: "var(--color-black)" }}
     >
       <div
@@ -24,7 +24,7 @@ export default async function Footer() {
             <img
               src={settings.logotype.node.mediaItemUrl}
               alt={settings.logotype.node.altText || "Logo"}
-              className="h-40 w-auto"
+              className="h-auto w-auto object-contain max-h-20"
             />
           ) : (
             settings.headerTitle

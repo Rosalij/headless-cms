@@ -52,7 +52,7 @@
 
 
 body {
-  background: white;
+  background: var(--color-secondary);
   font-family: var(--font-body);
 }
 
