@@ -14,13 +14,7 @@ export default async function FAQ() {
       <div className="mx-auto px-6" style={{ maxWidth: "var(--layout-content)" }}>
 
         <div className="mb-16">
-          <p
-            className="font-body font-semibold tracking-widest uppercase mb-3"
-            style={{ fontSize: "var(--text-xs)", color: "var(--color-secondary)" }}
-          >
-            FAQ
-          </p>
-       
+      
         </div>
 
         <FaqList faqs={faqs} />
