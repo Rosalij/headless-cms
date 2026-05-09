@@ -1,3 +1,5 @@
+// This is the Hero section component for the application.
+// It fetches the hero image and heading text from WordPress using GraphQL and displays them as a full-screen background image with an overlay for visual effect, along with the logotype if available.
 import Image from "next/image";
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_GLOBAL_SETTINGS } from "@/lib/wordpress/queries";

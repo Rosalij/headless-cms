@@ -1,3 +1,7 @@
+// This file defines TypeScript types for the data structures used in the application.
+// Types such as navigation pages, global settings, team members, CTAs, tours, FAQs, and testimonials. 
+// These types are used to ensure type safety when fetching and using data from the WordPress backend via GraphQL queries.
+
 export type NavPage = {
   title?: string;
   slug?: string;

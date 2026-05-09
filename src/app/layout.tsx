@@ -1,6 +1,10 @@
+// This is the root layout component for the Next.js application.
+//  It defines the overall structure of the HTML document, including the header and footer that will be present on all pages.
+//  The metadata object provides information about the page, such as the title and description, which can be used for SEO purposes.
+
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/layout/Header";
+import Header from "@/components/layout/Header";  
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {

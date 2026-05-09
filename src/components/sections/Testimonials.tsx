@@ -1,3 +1,5 @@
+// This is the Testimonials section component for the application.
+// It fetches testimonial data from WordPress using GraphQL and displays a grid of testimonials with quotes and authors.
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_TESTIMONIALS } from "@/lib/wordpress/queries";
 import { Testimonial, TestimonialsResponse } from "@/types/types";

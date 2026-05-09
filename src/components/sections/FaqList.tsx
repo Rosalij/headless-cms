@@ -1,3 +1,6 @@
+// This is the FaqList component that renders a list of FAQs in an accordion style.
+// It uses React's useState hook to manage the open state of each FAQ item, allowing users to click on a question to reveal the answer.
+
 "use client";
 
 import { useState } from "react";

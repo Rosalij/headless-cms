@@ -1,3 +1,5 @@
+// This is the Footer component for the application.
+//  It fetches global settings from WordPress using GraphQL and displays the footer content accordingly.
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_GLOBAL_SETTINGS } from "@/lib/wordpress/queries";
 import { GlobalSettingsResponse, GlobalSettings } from "@/types/types";

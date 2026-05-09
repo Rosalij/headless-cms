@@ -1,3 +1,5 @@
+// This is the CTA (Call to Action) component for the application.
+// It fetches CTA data from WordPress using GraphQL and displays a section with a background image, text, and a button based on the fetched data.
 import Image from "next/image";
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_CTA } from "@/lib/wordpress/queries";

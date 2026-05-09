@@ -1,3 +1,6 @@
+// This is the Tours section component for the application.
+// It fetches tour data from WordPress using GraphQL and displays a list of tours with their names, descriptions, and prices.
+
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_TOURS } from "@/lib/wordpress/queries";
 import { Tour, ToursResponse } from "@/types/types";

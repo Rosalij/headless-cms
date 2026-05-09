@@ -1,3 +1,7 @@
+// This is the TypeScript configuration file for the application.
+// It defines the compiler options and settings for the TypeScript compiler, such as the target JavaScript version, module resolution, and paths for module imports. 
+// It also specifies which files to include and exclude from the compilation process. 
+
 {
   "compilerOptions": {
     "target": "ES2017",

@@ -1,3 +1,6 @@
+// This is the Team section component for the application.
+// It fetches team member data from WordPress using GraphQL and displays a grid of team members with their portraits, names, roles, and descriptions.
+
 import Image from "next/image";
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_TEAM } from "@/lib/wordpress/queries";

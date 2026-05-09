@@ -1,3 +1,6 @@
+// This is a dynamic page component for rendering WordPress pages based on their slug.
+// It fetches the page data using GraphQL and displays the content accordingly.
+
 import FAQ from "@/components/sections/FAQ";
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_PAGES, GET_PAGE } from "@/lib/wordpress/queries";

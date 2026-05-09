@@ -1,3 +1,6 @@
+// This is the FAQ section component for the application.
+// It fetches FAQ data from WordPress using GraphQL and displays a list of FAQs using the FaqList component.
+
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_FAQS } from "@/lib/wordpress/queries";
 import { Faq, FaqResponse } from "@/types/types";

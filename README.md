@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Skintrack Åre
+
+This is a headless WordPress website for Skintrack Åre, a guided ski touring company based in Åre. Built with Next.js, TypeScript, Tailwind CSS v4, and WordPress as a headless CMS via Wordpress API and WPGraphQL plugin.
+
+## Tech Stack
+
+- **Frontend:** Next.js 16, React, TypeScript
+- **Styling:** Tailwind CSS v4
+- **CMS:** WordPress (Headless)
+- **API:** WPGraphQL (GraphQL)
+
+## Features
+
+- Headless WordPress architecture with GraphQL data fetching
+- Modular and reusable component structure
+- Dynamic pages generated from WordPress
+- Responsive design for mobile and desktop
+- Server-side rendering with Next.js
+
+## Project Structure
+
+src/
+├── app/
+│   ├── page.tsx              # Home page
+│   ├── [slug]/page.tsx       # Dynamic WordPress pages
+│   └── globals.css           # Global styles and Tailwind theme
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   └── sections/
+│       ├── Hero.tsx
+│       ├── Tours.tsx
+│       ├── Team.tsx
+│       ├── Testimonials.tsx
+│       ├── FAQ.tsx
+│       ├── FaqList.tsx
+│       ├── CTA.tsx
+│       └── FillerImage.tsx
+├── lib/
+│   └── wordpress/
+│       ├── client.ts         # GraphQL fetch client
+│       └── queries.ts        # GraphQL queries
+└── types/
+└── types.ts       
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+
+- A WordPress installation with the following plugins:
+  - WPGraphQL
+  - Advanced Custom Fields (ACF)
+  - WP Webhooks (for deploying on Netlify)
+  - WPGraphQL for ACF
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Rosalij/headless-cms.git
+cd headless-cms
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file in the root directory, with your Wordpress WPGraphQL endpoint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## WordPress Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The following Custom Post Types are required in WordPress:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Tours** — with fields: `tourName`, `tourDescription`, `price`
+- **Team Members** — with fields: `name`, `role`, `description`, `portraitImage`
+- **Testimonials** — with fields: `quote`, `quoteAuthor`
+- **FAQs** — with fields: `question`, `answer`
+- **CTAs** — with fields: `ctaText`, `buttonText`, `buttonLink`, `ctaBackgroundImage`
+- **Global Settings** — with fields: `headerTitle`, `logotype`, `heroHeadingText`, `heroImage`, `fillerImage`, `footercontact`, `homepageLink`
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project is deployed on Netlify on https://skintrackare.netlify.app/. To deploy your own instance:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push the repository to GitHub
+2. Connect the repository to Netlify
+3. Set the environment variable `WORDPRESS_URL` in Netlify's environment settings
+4. Set the build command to `next build` and publish directory to `.next`
+

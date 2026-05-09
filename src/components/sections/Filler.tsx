@@ -1,3 +1,6 @@
+// This is the Filler component for the application.
+// It fetches a filler image from WordPress using GraphQL and displays it as a full-screen background image with an overlay for visual effect.
+
 import Image from "next/image";
 import { fetchGraphQL } from "@/lib/wordpress/client";
 import { GET_GLOBAL_SETTINGS } from "@/lib/wordpress/queries";

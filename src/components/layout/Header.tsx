@@ -1,3 +1,7 @@
+// This is the Header component for the application.
+// It fetches global settings and pages from WordPress using GraphQL and displays the header content and navigation accordingly.
+// Navigation links are dynamically generated based on the pages fetched from WordPress, and a "Book Now" button is included for quick access to the contact page.
+
 import Image from "next/image";
 import Link from "next/link";
 import { fetchGraphQL } from "@/lib/wordpress/client";

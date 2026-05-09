@@ -1,3 +1,7 @@
+// This file contains GraphQL query strings for fetching data from the WordPress backend.
+// Each query corresponds to a specific type of data, such as posts, pages, global settings, team members, CTAs, tours, FAQs, and testimonials.
+// These queries are used by the fetchGraphQL function in the client module to retrieve data for the application.
+
 export const GET_POSTS = `
   query GetPosts {
     posts {
