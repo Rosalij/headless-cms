@@ -12,7 +12,7 @@ export default async function Filler() {
   if (!image?.mediaItemUrl) return null;
 
   return (
-    <section className="relative w-full h-screen bottom-0 flex items-center justify-center " style={{borderTop: "2px solid var(--color-secondary)",}}>
+    <div className="relative w-full h-screen bottom-0 flex items-center justify-center " style={{borderTop: "2px solid var(--color-secondary)",}}>
           {/* Background image */}
           {image?.mediaItemUrl && (
             
@@ -25,7 +25,7 @@ export default async function Filler() {
           )}
           {/* Overlay */}
       <div className="absolute inset-0" style={{ background: "var(--color-primary)", opacity: 0.2 }} />
-    </section>
+    </div>
     
   );
 }

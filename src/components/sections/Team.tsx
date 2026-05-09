@@ -30,7 +30,7 @@ export default async function Team() {
         </div>
 
         {/* Grid */}
-        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12" role="list">
+        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12">
           {members.map((item, index) => {
             const image = item.portraitImage?.node;
             return (
@@ -47,7 +47,7 @@ export default async function Team() {
                       alt={image.altText || item.name || ""}
                       fill
                       className="object-cover object-bottom transition-transform duration-700 group-hover:scale-115 group-hover:brightness-110"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) "
+                      sizes="50vw"
                     />
                   ) : (
                     <div
