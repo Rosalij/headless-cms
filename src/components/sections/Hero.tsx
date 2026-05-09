@@ -10,7 +10,7 @@ export default async function Hero() {
   const image = settings.heroImage?.node;
 
   return (
-    <section className="relative w-full h-screen bottom-0.5 flex items-center justify-center">
+    <section className="relative w-full h-165 bottom-0.5 flex items-center justify-center">
       {/* Background image */}
       {image?.mediaItemUrl && (
         <Image
@@ -25,7 +25,7 @@ export default async function Hero() {
       <div className="absolute inset-0" style={{ background: "var(--color-secondary)", opacity: 0.1 }} />
       {/* Content */}
       <div
-        className="relative m-auto z-10 h-full flex flex-col items-center gap-20 justify-center"
+        className="relative m-auto z-10 h-full flex flex-col items-center gap-15 justify-center"
         style={{ maxWidth: "var(--layout-wide)" }}
       >
         {settings.logotype?.node?.mediaItemUrl ? (

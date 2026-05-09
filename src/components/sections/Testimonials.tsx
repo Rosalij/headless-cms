@@ -59,8 +59,7 @@ export default async function Testimonials() {
                   className="font-body  leading-relaxed flex-1 "
                   style={{
                     fontSize: "var(--text-md)",
-                    letterSpacing: "1px",
-                    color: "var(--color-secondary)",
+                    color: "var(--color-primary)",
                   }}
                 >
                   {item.quote}
