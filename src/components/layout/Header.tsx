@@ -15,12 +15,12 @@ export default async function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 w-full py-1"
+      className="fixed z-50 w-full py-1"
   style={{ background: "var(--color-background)", borderBottom: "2px solid var(--color-secondary)" }}
 >
       <div
         className="mx-auto flex-col p-2 flex items-center justify-between md:flex-row"
-        style={{ maxWidth: "var(--layout-wide)" }}
+      
       >
         {/* Logo / Title */}
         <Link href={settings.homepageLink ?? "/"}>
@@ -43,7 +43,7 @@ export default async function Header() {
         </Link>
 
         {/* Nav */}
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center gap-2 md:gap-6 p-1">
           {pages.map((page) => (
             <Link
               key={page.slug}
