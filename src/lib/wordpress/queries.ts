@@ -47,29 +47,35 @@ export const GET_PAGES = `
 
 export const GET_GLOBAL_SETTINGS = `
   query getGlobalSettings {
-    allGlobalSettings {
-      nodes {
-        globalsettingsfields {
-          footercontact
-          headerTitle
-          heroHeadingText
-          heroImage {
-            node {
-              altText
-              mediaItemUrl
-            }
+  allGlobalSettings {
+    nodes {
+      globalsettingsfields {
+        fillerImage {
+          node {
+            altText
+            mediaItemUrl
           }
-          homepageLink
-          logotype {
-            node {
-              altText
-              mediaItemUrl
-            }
+        }
+        footercontact
+        headerTitle
+        heroHeadingText
+        heroImage {
+          node {
+            altText
+            mediaItemUrl
+          }
+        }
+        homepageLink
+        logotype {
+          node {
+            altText
+            mediaItemUrl
           }
         }
       }
     }
   }
+}
 `;
 
 export const GET_TEAM = `

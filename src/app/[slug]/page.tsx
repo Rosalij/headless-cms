@@ -29,7 +29,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           className="font-heading mb-6"
           style={{
             fontSize: "clamp(2rem, 6vw, var(--text-4xl))",
-            color: "var(--color-primary)",
+            color: "var(--color-secondary)",
             lineHeight: 1.2,
           }}
         >

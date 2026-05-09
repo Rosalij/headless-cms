@@ -38,8 +38,8 @@ export default async function Team() {
 
                 {/* Image */}
                 <div
-                  className=" mx-auto relative w-90 h-90 overflow-hidden"
-                  style={{aspectRatio: "3/4", borderRadius: "var(--radius-sm)" }}
+                  className=" mx-auto relative w-full overflow-hidden"
+                  style={{aspectRatio: "1/1", borderRadius: "var(--radius-sm)" }}
                 >
                   {image?.mediaItemUrl ? (
                     <Image
@@ -47,7 +47,7 @@ export default async function Team() {
                       alt={image.altText || item.name || ""}
                       fill
                       className="object-cover object-bottom transition-transform duration-700 group-hover:scale-115 group-hover:brightness-110"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) "
                     />
                   ) : (
                     <div

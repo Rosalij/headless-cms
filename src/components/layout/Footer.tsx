@@ -8,16 +8,16 @@ export default async function Footer() {
 
   return (
     <footer
-      className=" w-full border-1 py-10 bottom-0 left-0 right-0 mt-auto"
-      style={{ background: "var(--color-background) ", opacity: 0.6, color: "var(--color-black)" }}
+      className="w-full border-1 p-7 left-0 right-0"
+      style={{ borderTop: "5em solid var(--color-secondary)", background: "var(--color-background) ", opacity: 0.6, color: "var(--color-black)" }}
     >
       <div
-        className="mx-auto px-6 flex flex-col items-center justify-between gap-6"
+        className="mx-auto  px-6 flex flex-col items-center justify-between gap-6"
         style={{ maxWidth: "var(--layout-wide)" }}
       >
         {/* Title */}
         <span
-          className="font-heading tracking-tight"
+          className=" font-heading tracking-tight"
           style={{ fontSize: "var(--text-lg)" }}
         >
           {settings.logotype?.node?.mediaItemUrl ? (

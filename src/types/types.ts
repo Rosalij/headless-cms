@@ -24,6 +24,7 @@ export type GlobalSettings = {
   heroImage?: Image;
   homepageLink?: string;
   logotype?: Image;
+  fillerImage?: Image;
 };
 
 export type GlobalSettingsResponse = {

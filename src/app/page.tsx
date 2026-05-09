@@ -6,6 +6,8 @@ import Team from "@/components/sections/Team";
 import CTA from "@/components/sections/CTA";
 import Tours from "@/components/sections/Tours";
 
+import Filler from "@/components/sections/Filler";
+
 export default async function Page() {
   const data = await fetchGraphQL(GET_POSTS);
 
@@ -16,7 +18,7 @@ export default async function Page() {
 < CTA />
 
 < Team />
-
+< Filler />
 </>
   );
 }
