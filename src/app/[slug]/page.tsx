@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   if (page) {
     return (
-      <div className="w-full min-h-screen" style={{ background: "var(--color-background)" }}>
+      <div className="w-full min-h-screen mb-16 py-10" style={{ background: "var(--color-background)" }}>
         <div className="mx-auto px-6 py-12" style={{ maxWidth: "var(--layout-content)" }}>
           <h1
             className="font-heading mb-6"

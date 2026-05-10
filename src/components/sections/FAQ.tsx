@@ -13,7 +13,7 @@ export default async function FAQ() {
   if (!faqs.length) return null;
 
   return (
-    <section id="faq" className="w-full py-10" style={{ background: "var(--color-background)" }}>
+    <section id="faq" className="w-full py-7" style={{ background: "var(--color-background)" }}>
       <div className="mx-auto px-2" style={{ maxWidth: "var(--layout-content)" }}>
 
         <div className="mb-16">
